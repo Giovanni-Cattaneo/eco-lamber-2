@@ -1,0 +1,18 @@
+.logo {
+    width: 80px;
+}
+
+.navbar {
+    background-color: #146731;
+}
+
+.nav-item {
+    >a {
+        color: whitesmoke;
+        border-bottom: 3px solid transparent;
+    }
+
+    >a:hover {
+        border-bottom: 3px solid;
+    }
+}
