@@ -19,6 +19,10 @@
     @vite(['resources/js/app.js'])
 </head>
 <style>
+    .navbar {
+        background-color: #146731;
+    }
+
     main {
         background-color: #c9e3ac;
 
@@ -32,9 +36,7 @@
 
 <body>
     <div id="app">
-
-
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container d-flex justify-content-between">
                 @include('partial.header')
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
