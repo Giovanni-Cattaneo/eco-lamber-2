@@ -57,7 +57,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('admin.events.index');
     }
 
     /**
@@ -65,7 +65,15 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        //
+        $validated = $request->validated();
+        if ($request->has('image')) {
+            $img_path = Storage::put('uploads', $validated['img']);
+            $validated['img'] = $img_path;
+        }
+
+        Event::update($validated);
+
+        return to_route('admin.events.index');
     }
 
     /**
