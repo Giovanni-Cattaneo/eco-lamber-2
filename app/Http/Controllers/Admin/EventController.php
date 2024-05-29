@@ -25,7 +25,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.events.index');
     }
 
     /**
@@ -33,7 +33,15 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        $validated = $request->validated();
+        if ($request->has('image')) {
+            $img_path = Storage::put('uploads', $validated['img']);
+            $validated['img'] = $img_path;
+        }
+
+        Event::create($validated);
+
+        return to_route('admin.events.index');
     }
 
     /**
