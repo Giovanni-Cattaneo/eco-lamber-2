@@ -39,7 +39,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container d-flex justify-content-between">
                 @include('partial.header')
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
 
 
